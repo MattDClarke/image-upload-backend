@@ -6,11 +6,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.js"
+    "start": "node --import ./instrument.js index.js",
+    "dev": "nodemon --exec \"node --import ./instrument.js\" index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@sentry/node": "^10.20.0",
     "cloudinary": "^2.7.0",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
